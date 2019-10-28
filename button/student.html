@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>按鈕練習</title>
+</head>
+	<!--CSS設定可寫於html檔，但若設定項目過多，建議仍是獨立連結外部CSS檔-->
+	<style>
+		.btn{
+			width:200px;/*寬度100像素*/
+			border:0;/*邊框為0*/
+			border-radius: 10px;/*圓角10像素*/
+			padding:20px;/*寬度100像素*/
+			background-color: darkcyan;/*背景顏色深藍綠色*/
+			color:whitesmoke;/*文字顏色白淺灰色*/
+			font-size: 20px;/*文字字級28像素*/
+		}
+		.btn span{
+			transition: 0.5s;/*過場0.5秒*/
+		}
+		.btn:hover span{
+			padding-right:25px;/*內緣間距右側25像素（左移）*/
+		}
+		.btn span:after{
+			content: ">>";/*在span標籤後加上>>*/
+			opacity: 0;/*透明度為0*/
+			transition: 0.5s;/*過場0.5秒*/
+			
+		}
+		.btn:hover span:after{
+			opacity: 1;/*透明度100%*/
+		}
+	</style>
+
+<body>
+	<!--輸入html語法在此下方-->
+	
+</body>
+</html>

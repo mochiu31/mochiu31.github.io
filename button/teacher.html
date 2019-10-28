@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>按鈕練習</title>
+	<link href="css/hover-min.css" rel="stylesheet">
+</head>
+	<style>
+		/*-----------------第一段課程-----------------*/
+		.btn{
+			width:200px;/*寬度100像素*/
+			border:0;/*邊框為0*/
+			border-radius: 10px;/*圓角10像素*/
+			padding:20px;/*寬度100像素*/
+			background-color: darkcyan;/*背景顏色深藍綠色*/
+			color:whitesmoke;/*文字顏色白淺灰色*/
+			font-size: 20px;/*文字字級28像素*/
+			text-decoration: none;/*文字裝飾設為無*/
+		}
+		.btn span{
+			transition: 0.5s;/*過場0.5秒*/
+			padding-left: 25px; /*內緣間距左側25像素（右移）*/
+		}
+		.btn:hover span{
+			padding-right:25px;/*內緣間距右側25像素（左移）*/
+		}
+		.btn span:after{
+			content: ">>";/*在span標籤後加上>>*/
+			opacity: 0;/*透明度為0*/
+			transition: 0.5s;/*過場0.5秒*/
+			
+		}
+		.btn:hover span:after{
+			opacity: 1;/*透明度100%*/
+		}
+		
+		
+		/*-----------------第二段課程-----------------*/
+		.divMask{
+			display: block; /*顯示為塊狀*/
+			overflow: hidden; /*超過的區域設為隱藏*/
+			border-radius: 10px;/*圓角設為10像素*/
+			width: 240px;/*寬度設為240像素*/
+			float: left;/*浮動設為向左（讓div可以橫向排列）*/
+		}
+		
+		.btn-red{
+			background-color: brown;/*設定背景顏色為紅棕色*/
+		}
+		.hvr-sweep-to-right:before{
+			background-color: palevioletred;/*設定滑過背景顏色為淡紫紅*/
+		}
+
+	</style>
+
+<body>
+	<!--第一段課程：ＣＳＳ動態按鈕-->
+	<div class="divMask">
+	<a href="http://www.google.com">
+	<button class="btn">
+		<span>前往觀看</span>
+	</button>
+	</a>
+		
+	<!--第二段課程：套用hover.css動態CSS檔案-->
+	</div>
+	<div class="divMask">
+	<a href="http://www.google.com" class="hvr-sweep-to-right btn btn-red">向右滑動</a>
+	</div>
+</body>
+</html>
